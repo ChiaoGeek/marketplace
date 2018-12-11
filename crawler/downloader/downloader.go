@@ -22,7 +22,6 @@ func Getwebpage(mrequest *reqres.Mrequest) (*http.Response, error){
 	}
 	client := http.Client{Transport:transport}
 	newrequest,err := http.NewRequest(mrequest.Method, mrequest.Url, nil)
-	//newrequest.Header.Set("User-Agent", "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)")
 
 	if err != nil {
 		return nil, err
@@ -32,7 +31,5 @@ func Getwebpage(mrequest *reqres.Mrequest) (*http.Response, error){
 		fmt.Println(err.Error())
 		return resp, err
 	}
-	//fmt.Println(mrequest.Url)
-	//fmt.Println(mrequest.Method)
 	return resp, err
 }

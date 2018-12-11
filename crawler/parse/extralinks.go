@@ -30,7 +30,6 @@ func Getdetail(node *html.Node, originurl string, res *[]*reqres.Detailres) {
 	if node == nil {
 		return
 	}
-	//c := make(chan string, 3)
 	re := make([]*html.Node, 0)
 	Getdetaillink(node, &re)
 
@@ -45,34 +44,17 @@ func Getdetail(node *html.Node, originurl string, res *[]*reqres.Detailres) {
 			}
 			n = x.FirstChild.NextSibling.NextSibling.NextSibling.FirstChild.NextSibling.FirstChild.Data
 			p = x.FirstChild.NextSibling.NextSibling.NextSibling.FirstChild.NextSibling.NextSibling.NextSibling.FirstChild.Data
-			//n = x.Data
-			//p = x.Data
 			singler := reqres.Detailres{
 				n,
 				u,
 				p,
 			}
-			//fmt.Printf("%+v\n", singler)
 			*res = append(*res, &singler)
 		}
-		//u = "test"
-		//n = "t"
-		//n = x.FirstChild.NextSibling.FirstChild.FirstChild.Data
-		//p = "e"
-		//n = x.FirstChild.NextSibling.FirstChild.FirstChild.Data
-
 
 
 	}
-	//singler := reqres.Detailres{
-	//	n,
-	//	u,
-	//	p,
-	//}
 
-	//fmt.Printf("%+v\n", singler)
-
- 	//*res = append(*res, &singler)
 }
 
 func Getdetaillink(node *html.Node,  res *[]*html.Node) {
@@ -80,7 +62,6 @@ func Getdetaillink(node *html.Node,  res *[]*html.Node) {
 
 		for _,a := range node.Attr  {
 			if a.Key == "class" && a.Val == "col-md-6 mb-4 d-flex no-underline"{
-				//for _,b := range node.Attr {
 				*res = append(*res, node)
 			}
 		}
