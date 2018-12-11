@@ -1,7 +1,7 @@
 # marketplace
 Analyzing GitHub marketplace
 
-![Alt text](https://github.com/ChiaoGeek/marketplace/analysis/img/res.png "Optional title")
+![Alt text](https://github.com/ChiaoGeek/marketplace/blob/master/analysis/img/res.png "Optional title")
 
 
 
